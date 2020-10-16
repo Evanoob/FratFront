@@ -1,7 +1,7 @@
 module.exports = {
     devServer: {
-      proxy: "https://frat-back.herokuapp.com/",
+      proxy: "https://fraternelles93b.herokuapp.com",
       host: "herokuapp",
-      publicPath: "https://frat-front.herokuapp.com/" // utile pour supprimer l'erreur sockjs-node (Not Found) dans la console du navigateur
+      publicPath: "https://fraternelles93.herokuapp.com" // utile pour supprimer l'erreur sockjs-node (Not Found) dans la console du navigateur
     },
   };
