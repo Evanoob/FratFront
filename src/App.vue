@@ -57,7 +57,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   max-width: 100vw;
- background-image:  url(assets/img/bg/bg.jpg);
+ background-image:  url(assets/img/bg/frat1.jpg);
  /* , url(assets/img/bg/bg1.jpg); */
   background-repeat:no-repeat;
   /* , no-repeat; */
