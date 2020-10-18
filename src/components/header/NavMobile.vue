@@ -122,6 +122,7 @@ flex-direction: column;
 
 #nav-mobile > #ul-mobile > .li:hover > #sous-mobile {
   background: rgb(173, 66, 152);
+  position: absolute;
    display:flex;
         flex-direction: column;
         justify-content: center;
