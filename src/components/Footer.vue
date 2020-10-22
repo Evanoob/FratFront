@@ -1,7 +1,7 @@
 <template>
    <footer id="footer" class="footer-bottom">
       <ul class="links">
-        <li class="copy">&copy;GS</li>
+        <li class="copy co">&copy;GS</li>
         <li>
           <router-link to="/cgu" class="copy">C.G.U</router-link>
         </li>
@@ -72,6 +72,10 @@ footer > ul > li.copy {
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
+}
+
+.copy.co {
+  cursor: default;
 }
 
 .copy:hover {
