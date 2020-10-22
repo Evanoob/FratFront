@@ -78,7 +78,6 @@ export default {
   width: 95%;
   min-width: 200px;
   background: black;
-  /* min-height: 160px; */
   border: 2px solid #ec008c;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -97,7 +96,6 @@ export default {
 
 .sujet {
   color: #ad4298;
-  /* margin-bottom: 10px; */
 }
 
 .message {

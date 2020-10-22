@@ -38,9 +38,6 @@ hr {
         width: 32px;
         height: 36px;
         margin-right: 20px;
-        /* position: fixed; 
-        top: 20px;
-        right: 5%; */
     }
 .barBurger {
       width: 30px;
@@ -51,17 +48,5 @@ hr {
     cursor: pointer;
     border: transparent;
 }
-/* #burger.active .rotate1 {
-    transform: rotate(-45deg);
-    background: #ec008c;
-  } */
-
-/* #burger.active .rotate2 {
-    transform: rotateZ(45deg);
-    background: #ec008c;
-  }   */
-  /* #burger.active .color {
-    background: #ec008c;
-  } */
 }
 </style>

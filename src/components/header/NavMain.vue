@@ -19,6 +19,7 @@
         </ul>
       </li>
       <li class="li" v-if="isConnect  && currentUser.role === 'user'">
+        <!-- bloque la route à connecté et role 'user' -->
         <router-link to="/signaler" class="link-nav">Signaler</router-link>
       </li>
       <li class="li" v-if="isConnect">
@@ -28,6 +29,7 @@
         <router-link to="/profil" class="link-nav">Profil</router-link>
       </li>
       <li class="li" v-if="isConnect && currentUser.role === 'admin'">
+        <!-- bloque le chemin à connecté et role 'admin' -->
         <router-link to="/admin" class="link-nav">Admin</router-link>
       </li>
       <li class="li" v-if="!isConnect">
@@ -70,10 +72,7 @@ export default {
   width: 100%;
   height: 100px;
  background: #ebc3df;
-   /* display: flex;
-   justify-content: space-between; */
   border: 1px solid #ec008c;
-  /* margin-top: -5px; */
   padding-right: 10px;
   padding-left: 10px;
 }

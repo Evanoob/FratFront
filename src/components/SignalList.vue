@@ -1,5 +1,4 @@
 <template>
-  <!-- <div id="signalList"> -->
       <ul class="signals">
           <li class="signal" v-if="!signals.length">Aucun signalement n'est disponible</li>
           <li v-for="(signal, i) in signals.slice().reverse()" :key="i" class="signal">
@@ -10,7 +9,6 @@
              <p><button class="btn-signal" @click="deleteSignal(signal._id)">Supprimer</button></p>
           </li>
       </ul>
-  <!-- </div> -->
 </template>
 
 <script>

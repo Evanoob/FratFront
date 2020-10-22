@@ -4,9 +4,6 @@
    <li class="li">
         <router-link to="/">Accueil</router-link>
       </li>
-         <!-- <li class="li deroulant">
-         <a href="#" class="after">Missions ▼</a>
-        <ul id="sous-mobile"> -->
           <li class="li">
             <router-link to="/maraudes" class="mission-mobile">Maraudes</router-link>
           </li>
@@ -16,8 +13,6 @@
           <li class="li">
             <router-link to="/defi" class="mission-mobile">Jeunes</router-link>
           </li>
-        <!-- </ul>
-      </li> -->
       <li class="li" v-if="isConnect  && currentUser.role === 'user'">
         <router-link to="/signaler">Signaler</router-link>
       </li>
@@ -116,31 +111,6 @@ flex-direction: column;
         position: relative;
 }
 
-/* #nav-mobile > #ul-mobile > .li > #sous-mobile {
-  display: none;
-} */
-
-/* #nav-mobile > #ul-mobile > .li:hover > #sous-mobile {
-  background: rgb(173, 66, 152);
-  position: absolute;
-   display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position:absolute;
-        margin-top:190px; */
-        /* margin-right:-10px; */
-        /* z-index: 1;
-    
-} */
-
-/* #nav-mobile > #ul-mobile > .li > #sous-mobile > .missions-mobile {
-    width: 100px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-} */
 
 .mission-mobile {
   color: white;
