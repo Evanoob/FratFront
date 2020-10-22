@@ -67,26 +67,19 @@ export default {
 </script>
 
 <style>
-
-/* #usersList {
-  display: block;
-  margin: auto;
-  margin-bottom: 30px;
-} */
-
 ul.users {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  /* align-items: center; */
   justify-content: center;
 }
+
 li.user {
   display: flex;
   flex-direction: column;
   width: 225px;
   min-width: 225px;
-  height: 190px;
+  height: 200px;
   background: black;
   margin-right: 10px;
   margin-bottom: 10px;
