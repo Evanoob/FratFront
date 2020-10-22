@@ -60,6 +60,7 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 40px;
+    background: rgba(0, 0, 0, .6);
 }
 
 .signal {
@@ -83,12 +84,12 @@ export default {
 
 .date {
   float: right;
-  color: #ad4298;
+  color:#ec008c;
   font-weight: 700;
 }
 
 .sujet {
-  color: #ad4298;
+  color: #ec008c;
   /* margin-bottom: 10px; */
 }
 
@@ -109,6 +110,12 @@ export default {
   font-size: 14px;
   cursor: pointer;
   float: right;
+}
+
+.btn-signal:hover {
+  color: #ad4298;
+  background: white;
+  border: 2px solid #ad4298;
 }
 
 @media screen and (max-width: 600px) {

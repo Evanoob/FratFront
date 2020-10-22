@@ -141,6 +141,7 @@ export default {
 <style>
 #edit {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 }
@@ -193,19 +194,20 @@ export default {
   background: #ebc3df;
   color: #ec008c;
   border: 1px solid #ec008c;
-  font-weight: 600px !important;
+    font-weight: bold;
   font-size: 16px;
   cursor: pointer;
 }
 
 .btn-form:hover {
-  color: white
+  color: #ad4298;
+  background: white;
 }
 
 .supp {
   cursor: pointer;
   font-weight: 700;
-  color: #ad4298;
+  color:white;
   
 }
 

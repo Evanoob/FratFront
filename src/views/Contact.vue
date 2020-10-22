@@ -1,115 +1,175 @@
 <template>
-  <div class="contact">
     <main id="main-content">
-      <h1 class="title1">Formulaire de contact</h1>
-      <div class="form">
-        <form action="post" id="form-contact">
-          <div class="separe">
-            <label for="email" id="label1">Email :</label>
+      <h1 class="title1 bottom">Formulaire de contact</h1>
+ <section class="contact">
+        <form @submit.prevent="sendMessage" class="form-contact">
+         
+            <label for="from" class="label">Email :</label>
             <input
-              id="email"
-              type="email"
-              class="write"
+              type="from"
+              class="input"
               placeholder="blabla@gmail.com"
               required
-              name="email"
+              v-model="from"
             />
-          </div>
-
-          <div class="separe">
-            <label for="pseudo" id="label1">Pseudo :</label>
+            <label for="pseudo" class="label">Pseudo :</label>
             <input
               id="pseudo"
               type="text"
-              class="write"
+              class="input"
               placeholder="Entrez votre pseudo"
               required
               name="pseudo"
+              v-model="pseudo"
             />
-          </div>
-          <div class="separe">
+            <label for="subject" class="label">Sujet :</label>
+            <input 
+            id="subject" 
+            type="text" 
+            class="input" 
+            v-model="subject" 
+            />
+         <label for="message" class="label">Message :</label>
             <textarea
-              name="message"
               id="message"
+              class="txt-form"
               cols="80"
               rows="15"
-              placeholder="Inscrivez votre message ici afin de nous contacter, merci."
+              placeholder="Vous rencontrez un problème sur le site, contactez-nous ici. Merci !"
+              v-model="message"
             ></textarea>
-          </div>
-          <div class="separe">
-            <input id="submit" type="submit" value="Envoyer" />
-          </div>
+         <button class="btn-form">Envoyer</button>
         </form>
-      </div>
+
+        <article class="expliq">
+          <h2 class="title2">Fonctionnement</h2>
+          <p class="blabla">Ce formulaire est là si vous rencontrez un soucis lors de votre navigation sur le site. Ainsi vous pourrez directement prévenir la personne qui s'occupe de l'administration. <br/> 
+          Si vous souhaitez nous signaler quelque chose en rapport avec l'association, il faut vous inscrire et passer par le formulaire de signalement qui est mis à votre disposition.</p>
+        </article>
+</section>
     </main>
-  </div>
 </template>
 
 <script>
-export default {};
+import { apiHandler } from "./../api/handler";
+const handler = apiHandler();
+
+export default {
+  name: "Contact",
+  data() {
+    return {
+from: "",
+pseudo: "",
+subject: "",
+message:""
+    };
+  },
+  methods: {
+    async sendMessage() {
+      await handler.post("/contact", {
+        from: this.from,
+        pseudo: this.pseudo,
+        subject: this.subject,
+        message: this.message
+      });
+      alert("Votre message a bien été envoyé, merci.")
+      location.href = "../Contact"
+    }
+  }
+};
 </script>
 
 <style>
-div.form {
-  width: 660px;
-  height: 430px;
-  display: block;
-  margin: auto;
+.bottom {
+  margin-bottom: 60px;
 }
 
-form#form-contact {
-  width: 650px;
-  height: 420px;
+section.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.form-contact {
+  width: 300px;
+  height: 550px;
+  background: black;
   border: 2px solid #ec008c;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: auto;
   padding: 15px;
   display: flex;
-  flex-wrap: wrap;
-  direction: column;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-div.separe {
-  margin-bottom: 20px;
-}
-
-label#label1 {
-  margin-bottom: 10px;
+.label {
   margin-right: 10px;
-}
-
-input.write {
-  width: 170px;
-  height: 30px;
-  margin-right: 20px;
-  border-radius: 10px;
-  font-size: 16px;
+  font-weight: 700;
   color: #ec008c;
-  border: 1px solid #ec008c;
-  padding-left: 5px;
 }
 
-textarea#message {
-  border: 1px solid #ec008c;
-  border-radius: 10px;
-  padding: 5px;
+.input {
+  width: 265px;
+  height: 30px;
+  border-radius: 5px;
   font-size: 14px;
+  color: black;
+  border: 2px solid black;
+  padding: 5px
 }
 
-#submit {
-  width: 150px;
+.txt-form {
+  border-radius: 5px;
+  font-size: 14px;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.btn-form {
+   width: 265px;
   height: 30px;
-  margin: auto;
-  border-radius: 10px;
-  background: rgba(173, 66, 152, 0.3);
+  margin-top: 10px;
+  border-radius: 5px;
+  background: #ebc3df;
   color: #ec008c;
-  border: 1px solid #ec008c;
-  font-weight: 600;
+  border: 2px solid #ec008c;
+  font-weight: bold;
   font-size: 16px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 1080px) {
+.btn-form:hover {
+  color: #ad4298;
+  background: white;
+}
+
+.expliq {
+  width: 380px;
 
 }
+
+p.blabla {
+  color: white;
+    background: rgba(0, 0, 0, .6);
+  padding: 15px;
+}
+
+ @media screen and (max-width: 480px) {
+.form-contact {
+  width: 250px;
+  padding: 10px;
+}
+
+.input {
+  width: 230px;
+}
+
+.btn-form {
+  width: 230px;
+}
+ }
 </style>

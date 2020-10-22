@@ -18,13 +18,13 @@
           </li>
         </ul>
       </li>
-      <li class="li" v-if="isConnect">
+      <li class="li" v-if="isConnect  && currentUser.role === 'user'">
         <router-link to="/signaler" class="link-nav">Signaler</router-link>
       </li>
       <li class="li" v-if="isConnect">
         <router-link to="/actus" class="link-nav">Actus</router-link>
       </li>
-      <li class="li" v-if="isConnect && currentUser.role === 'user'">
+      <li class="li" v-if="isConnect">
         <router-link to="/profil" class="link-nav">Profil</router-link>
       </li>
       <li class="li" v-if="isConnect && currentUser.role === 'admin'">
@@ -67,7 +67,7 @@ export default {
 
 <style lang="css">
 #nav-main {
-  width: 700px;
+  width: 100%;
   height: 100px;
  background: #ebc3df;
    /* display: flex;

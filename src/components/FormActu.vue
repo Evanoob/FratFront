@@ -110,6 +110,8 @@ padding: 5px;
 }
 
 .btn-form:hover {
-  color: white
+   color: #ad4298;
+  background: white;
+  border: 2px solid #ad4298;
 }
 </style>

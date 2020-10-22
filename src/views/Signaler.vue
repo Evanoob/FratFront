@@ -63,9 +63,8 @@ export default {
       this.pseudo = apiRes.data.pseudo;
     },
 
-    async postSignal() {
+   async postSignal() {
       const { pseudo, object, text } = this.$data;
-      // const { pseudo } = this.$data;
       try {
         const apiRes = await axios.post(
           process.env.VUE_APP_BACKEND_URL + "/signals",
@@ -79,7 +78,8 @@ export default {
       } catch (apiErr) {
         console.error(apiErr);
       }
-      // location.href = "../Signaler";
+      alert("Votre signalement a bien été pris en compte, merci.")
+      location.href = "../Signaler";
     }
   },
   created() {
@@ -93,6 +93,9 @@ export default {
 </script>
 
 <style>
+.bottom {
+  margin-bottom: 60px;
+}
 .form-signal {
   width: 300px;
   height: 480px;
@@ -109,7 +112,7 @@ export default {
 .label {
   margin-right: 10px;
   font-weight: 700;
-  color: #ad4298;
+  color: #ec008c;
 }
 
 .input {
@@ -143,6 +146,11 @@ padding: 5px;
   cursor: pointer;
 }
 
+.btn-form:hover {
+  color: #ad4298;
+  background: white;
+}
+
 .form-select {
     width: 265px;
     height: 30px;
@@ -152,5 +160,18 @@ padding: 5px;
   border: 2px solid black;
   padding-left: 5px;
 } 
+
+ @media screen and (max-width: 480px) {
+.form-signal {
+  width: 250px;
+  padding: 10px;
+}
+
+.input,
+.form-select,
+.btn-form {
+  width: 230px;
+}
+ }
 
 </style>

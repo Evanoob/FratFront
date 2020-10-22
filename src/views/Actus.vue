@@ -1,10 +1,10 @@
 <template>
-  <div id="actus">
+
       <main id="main-content">
-          <h1 class="title1">Toutes les actus sont ici</h1>
+             <h1 class="title1 bottom">Toutes les actus sont ici !</h1>
 <ActuList />
       </main>
-  </div>
+
 </template>
 
 <script>
@@ -17,5 +17,7 @@ components: {
 </script>
 
 <style>
-
+.bottom {
+    margin-bottom: 60px;
+}
 </style>

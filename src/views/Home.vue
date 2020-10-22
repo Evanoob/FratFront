@@ -1,7 +1,6 @@
 <template>
     <main id="main-content">
-        <h1 class="title1">La solidarité un réel bienfait <br>
-        TEST</h1>
+        <h1 class="title1">La solidarité un réel bienfait</h1>
 
         <section class="firstSection">
             <h2 class="title2">Qui sommes nous ?</h2>
@@ -67,4 +66,3 @@
     </main>
 
 </template>
-

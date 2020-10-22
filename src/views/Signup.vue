@@ -156,7 +156,7 @@ input.write {
 }
 
 .btn-insc:hover {
-  color: white;
+  color: #ad4298
 }
 
 p#para1 {
@@ -166,8 +166,10 @@ p#para1 {
 }
 
 .btn-link {
-  color: #ad4298;
+  color: #ec008c;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 .btn-link:hover {

@@ -1,7 +1,7 @@
 <template>
   <!-- <div class="modo"> -->
     <main id="main-content">
-      <h1 class="title1">Dashboard Modérateur</h1>
+      <h1 class="title1">Dashboard Admin</h1>
       <!-- <h2 class="admin">
         <router-link to="/formActu" class="actu-link">Se rendre au formulaire d'actus</router-link>
       </h2> -->
@@ -27,8 +27,8 @@ export default {
   data() {
     return {
       users: false,
-      signals: false,
-      form: true
+      signals: true,
+      form: false
 }
   },
 
@@ -55,13 +55,20 @@ changeForm() {
 </script>
 
 <style>
+.bottom {
+  margin-bottom: 60px;
+}
 .admin {
   margin-bottom: 30px;
-  color: rgb(173, 66, 152);
+  color:#ec008c;
   font-family: "Lora", serif !important;
   font-weight: 700;
   font-size: 28px;
   cursor: pointer;
+}
+
+.admin:hover {
+  color: white;
 }
 
 .actu-link {
@@ -69,9 +76,9 @@ changeForm() {
   font-weight: 700;
 }
 
-a {
+/* a {
   text-decoration: none;
   color: rgb(173, 66, 152);
-}
+} */
 </style>
 

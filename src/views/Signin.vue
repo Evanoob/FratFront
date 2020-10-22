@@ -132,8 +132,11 @@ p#para1 {
 }
 
 .btn-link {
-  color: #ad4298;
+  color: #ec008c;
   text-decoration: none;
+   font-weight: bold;
+  font-size: 13px;
+
 }
 
 .btn-link:hover {

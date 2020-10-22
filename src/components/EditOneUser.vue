@@ -31,7 +31,7 @@
 
       <section class="form-section">
         <h2 class="form-h2">Rappel des investissements et rôles.</h2>
-        <ul>
+        <ul class="block-txt">
           <li class="inv">Ordinaire</li>
           <li class="inv">Empathique (2 signalements justes)</li>
           <li class="inv">Bienfaiteur (10 signalements justes)</li>
@@ -119,6 +119,7 @@ div.edit-user {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+    background: black;
 }
 
 .label {
@@ -151,7 +152,8 @@ div.edit-user {
 }
 
 .btn-form:hover {
-  color: white
+    color: #ad4298;
+  background: white;
 }
 
 .form-h2 {

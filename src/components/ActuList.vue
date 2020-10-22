@@ -1,7 +1,7 @@
 <template>
 
     <ul class="actus">
-      <li class="actu" v-if="!actus.length">Aucune actu n'est disponible pour le moment.</li>
+      <li class="actu" v-if="!actus.length">Aucune actu n'est disponible pour le moment. Nous sommes désolés, revenez plus tard !</li>
       <li v-for="(actu, i) in actus.slice().reverse()" :key="i" class="actu">
         <p class="date white">Le {{ moment(actu.date).format('DD/MM/YYYY') }}</p>
         <h2 class="sujet">{{ actu.subject }}</h2>
@@ -71,6 +71,7 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 40px;
+    background: rgba(0, 0, 0, .6);
 }
 
 .actu {
@@ -116,6 +117,12 @@ export default {
   font-size: 14px;
   cursor: pointer;
   float: right;
+}
+
+.btn-actu:hover {
+  color: #ad4298;
+  background: white;
+  border: 2px solid #ad4298;
 }
 
 @media screen and (max-width: 600px) {

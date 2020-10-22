@@ -22,7 +22,7 @@
           </p>
           <div class="dash">
             <button class="btn-dash">
-              <router-link class="link" :to="'/editOneUser/' + user._id">Edit</router-link>
+              <router-link class="link-user" :to="'/editOneUser/' + user._id">Edit</router-link>
             </button>
             <button class="btn-dash is-clickable" @click="deleteUser(user._id)">Supprimer</button>
           </div>
@@ -100,7 +100,7 @@ li.user {
   font-weight: 700;
   text-align: center;
   margin-bottom: 5px;
-  color: rgb(173, 66, 152);
+  color: #ec008c;
 }
 
 .dash {
@@ -113,8 +113,7 @@ li.user {
   justify-content: space-around;
 }
 
-
-.link {
+.link-user {
   text-decoration: none;
   color: #ec008c;
 }
@@ -123,9 +122,13 @@ li.user {
   cursor: pointer;
 }
 
+.link-user:hover {
+  color: #ad4298;
+}
+
 span.gras {
-  font-weight: 600;
-  color: rgb(173, 66, 152);
+   font-weight: 600;
+  color: #ec008c;
 }
 
 .btn-dash {
@@ -144,6 +147,8 @@ span.gras {
 }
 
 .btn-dash:hover {
-  color: white;
+  color: #ad4298;
+  background: white;
+  border: 2px solid #ad4298;
 }
 </style>

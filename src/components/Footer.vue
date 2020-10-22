@@ -3,13 +3,13 @@
       <ul class="links">
         <li class="copy">&copy;GS</li>
         <li>
-          <router-link to="/cgu">C.G.U</router-link>
+          <router-link to="/cgu" class="copy">C.G.U</router-link>
         </li>
         <li>
-          <router-link to="/plan">Plan</router-link>
+          <router-link to="/plan" class="copy">Plan</router-link>
         </li>
         <li>
-          <router-link to="/contact">Contact</router-link>
+          <router-link to="/contact" class="copy">Contact</router-link>
         </li>
       </ul>
 
@@ -68,14 +68,15 @@ footer > ul > li {
 
 footer > ul > li > a,
 footer > ul > li.copy {
-  color: #ec008c;
+  color: white;
   font-weight: 700;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .copy:hover {
-  color: white;
-  cursor: default;
+  color: #ec008c;
+  /* cursor: default; */
   font-size: 500;
 }
 

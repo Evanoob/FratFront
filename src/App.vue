@@ -57,7 +57,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   max-width: 100vw;
- background-image:  url(assets/img/bg/frat1.jpg);
+ background-image:  url(assets/img/bg/frat_bg.jpg);
  /* , url(assets/img/bg/bg1.jpg); */
   background-repeat:no-repeat;
   /* , no-repeat; */
@@ -99,7 +99,8 @@ section {
   font-family: "Lora", serif !important;
   font-weight: 700;
   font-size: 36px;
-  color: #ec008c;
+  /* color: #ec008c; */
+  color: white;
 }
 
 .title2 {
@@ -108,13 +109,15 @@ section {
   font-family: "Lora", serif !important;
   font-weight: 700;
   font-size: 28px;
-  color: #ad4298;
+  color: #ec008c;
 }
 
 p.para {
   text-align: justify;
   margin-bottom: 30px;
   color: white;
+  padding: 15px;
+  background: rgba(0, 0, 0, .6);
 }
 
 .extraBold {

@@ -4,27 +4,27 @@
    <li class="li">
         <router-link to="/">Accueil</router-link>
       </li>
-         <li class="li deroulant">
+         <!-- <li class="li deroulant">
          <a href="#" class="after">Missions ▼</a>
-        <ul id="sous-mobile">
-          <li class="missions-mobile">
+        <ul id="sous-mobile"> -->
+          <li class="li">
             <router-link to="/maraudes" class="mission-mobile">Maraudes</router-link>
           </li>
-          <li class="missions-mobile">
+          <li class="li">
             <router-link to="/urgences" class="mission-mobile">Urgences</router-link>
           </li>
-          <li class="missions-mobile">
+          <li class="li">
             <router-link to="/defi" class="mission-mobile">Jeunes</router-link>
           </li>
-        </ul>
-      </li>
-      <li class="li" v-if="isConnect">
+        <!-- </ul>
+      </li> -->
+      <li class="li" v-if="isConnect  && currentUser.role === 'user'">
         <router-link to="/signaler">Signaler</router-link>
       </li>
       <li class="li" v-if="isConnect">
         <router-link to="/actus">Actus</router-link>
       </li>
-         <li class="li"  v-if="isConnect && currentUser.role === 'user'">
+         <li class="li"  v-if="isConnect">
         <router-link to="/profil">Profil</router-link>
       </li>
       <li class="li"  v-if="isConnect && currentUser.role === 'admin'">
@@ -85,10 +85,9 @@ export default {
 
 <style>
 #nav-mobile {
-
      position: absolute;
         right: 0;
-        height: 350px;
+        height: 420px;
         top: 5vh;
         background: rgb(173, 66, 152);
         display: flex;
@@ -98,12 +97,13 @@ export default {
         width: 300px;
         transform: translateX(100%);
         transition: transform .5s ease-in-out;
-        
         padding-bottom: 10px;
 }
-#nav-moblie > #ul-mobile {display: flex;
+#nav-moblie > #ul-mobile {
+  display: flex;
 flex-direction: column;
 }
+
 #nav-mobile > #ul-mobile > .li {
         height: 50px;
         width: 300px;
@@ -116,11 +116,11 @@ flex-direction: column;
         position: relative;
 }
 
-#nav-mobile > #ul-mobile > .li > #sous-mobile {
+/* #nav-mobile > #ul-mobile > .li > #sous-mobile {
   display: none;
-}
+} */
 
-#nav-mobile > #ul-mobile > .li:hover > #sous-mobile {
+/* #nav-mobile > #ul-mobile > .li:hover > #sous-mobile {
   background: rgb(173, 66, 152);
   position: absolute;
    display:flex;
@@ -128,19 +128,19 @@ flex-direction: column;
         justify-content: center;
         align-items: center;
         position:absolute;
-        margin-top:190px;
+        margin-top:190px; */
         /* margin-right:-10px; */
-        z-index: 1;
+        /* z-index: 1;
     
-}
+} */
 
-#nav-mobile > #ul-mobile > .li > #sous-mobile > .missions-mobile {
+/* #nav-mobile > #ul-mobile > .li > #sous-mobile > .missions-mobile {
     width: 100px;
       height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
-}
+} */
 
 .mission-mobile {
   color: white;
