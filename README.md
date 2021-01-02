@@ -1,28 +1,3 @@
 # fraternelles
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# FratFront
-# front-assofrat
-# front-f
-# front-f
+Front pour passer le diplôme de Dév web et mobile fullstack js en 2020 !
+(encore en cours de dév...)
